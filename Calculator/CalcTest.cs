@@ -83,6 +83,7 @@ public class CalcTest
     }
 
     [Test]
+    [TestCase(16, 6, 4)]
     [TestCase(10, 3, 1)]
     [TestCase(9, 2, 1)]
     [TestCase(15, 5, 0)]
