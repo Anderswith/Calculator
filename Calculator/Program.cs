@@ -2,6 +2,7 @@
 
 class Program
 {
+    /*
     static void Main(string[] args)
     {
         IntCalculator _intCalculator = new IntCalculator();
@@ -12,6 +13,7 @@ class Program
         Modulus(_intCalculator);
         Reset(_intCalculator);
     }
+    */
 
     private static void Add(IntCalculator _intCalculator)
     {

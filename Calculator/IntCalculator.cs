@@ -18,24 +18,30 @@ public class IntCalculator : IIntCalculator
 
         if (Result < 0 && x < 0)
         {
-            Result -= x;
+            Result += x;
         }
     }
 
     public void Subtract(int x)
     {
-        if (x < 0)
-        {
-            Result += x;
-        }
-        Result -= x;
+            Result -= x;
     }
 
     public void Multiply(int x)
     {
-        if (Result >= 2147483647 && Result <= -2147483647)
+        if (x > 0)
         {
-            Console.WriteLine("Dit tal er for stort");
+            if (Result > int.MaxValue / x)
+            {
+                throw new OverflowException("overflow exception");
+            }
+        }
+        else if (x < 0)
+        {
+            if (Result < int.MinValue / x)
+            {
+                throw new OverflowException("overflow exception");
+            }
         }
         Result *= x;
     }
